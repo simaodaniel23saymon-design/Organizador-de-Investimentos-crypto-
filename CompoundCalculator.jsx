@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 export default function CompoundCalculator({ onResult }) {
@@ -8,10 +7,10 @@ export default function CompoundCalculator({ onResult }) {
 
   const calculate = () => {
     const P = parseFloat(principal);
-    const r = parseFloat(rate)/100;
+    const r = parseFloat(rate) / 100;
     const t = parseFloat(time);
 
-    const final = P * Math.pow(1+r, t);
+    const final = P * Math.pow(1 + r, t);
     const profit = final - P;
 
     onResult({ P, r, t, final, profit });

@@ -1,11 +1,10 @@
-
 import { useState } from "react";
 
 export default function CalendarAlarm() {
   const [date, setDate] = useState("");
 
   const setAlarm = () => {
-    alert("Alarm definido para: " + date);
+    alert("Alarme configurado para: " + date);
   };
 
   return (

@@ -1,9 +1,17 @@
-
 import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement
+} from "chart.js";
+
+ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 
 export default function Results({ data }) {
-  const labels = Array.from({length:data.t+1}, (_,i)=>i);
-  const values = labels.map(i => data.P * Math.pow(1+data.r, i));
+  const labels = Array.from({ length: data.t + 1 }, (_, i) => i);
+  const values = labels.map(i => data.P * Math.pow(1 + data.r, i));
 
   const chartData = {
     labels,
